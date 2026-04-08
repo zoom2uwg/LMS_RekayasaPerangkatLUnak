@@ -503,5 +503,176 @@ Principles:
     "Beck, K. (2004). Extreme Programming Explained. 2nd Edition.",
     "Anderson, D. (2010). Kanban: Successful Evolutionary Change for Your Technology Business.",
     "Poppendieck, M. & Poppendieck, T. (2003). Lean Software Development: An Agile Toolkit."
+  ],
+  assignments: [
+    {
+      id: "tugas-3-1",
+      title: "Praktik Scrum: Simulasi Sprint",
+      type: "kelompok",
+      description: "Mensimulasikan proses Scrum dalam tim untuk mengembangkan aplikasi sederhana selama 2 sprint.",
+      instructions: [
+        "Bentuk tim Scrum dengan roles: Product Owner, Scrum Master, Development Team (4-6 orang)",
+        "Pilih ide aplikasi sederhana (to-do list, calculator, dll)",
+        "Buat Product Backlog dengan minimal 10 user stories",
+        "Lakukan Sprint Planning untuk Sprint 1 (1 minggu)",
+        "Jalankan Daily Scrum setiap hari (15 menit)",
+        "Lakukan Sprint Review dan Retrospective di akhir Sprint 1",
+        "Ulangi untuk Sprint 2 dengan perbaikan dari retrospective",
+        "Dokumentasikan seluruh proses dan hasil"
+      ],
+      deliverables: [
+        "Product Backlog (dengan prioritas)",
+        "Sprint Backlog untuk setiap sprint",
+        "Foto/video Daily Scrum",
+        "Sprint Review presentation",
+        "Retrospective notes",
+        "Aplikasi yang berfungsi (minimal viable product)",
+        "Laporan pengalaman menerapkan Scrum (5-8 halaman)"
+      ],
+      duration: "2 minggu",
+      difficulty: "sulit",
+      skills: [
+        "Kerja tim Agile",
+        "Manajemen proyek",
+        "Pengembangan software",
+        "Komunikasi",
+        "Refleksi dan continuous improvement"
+      ],
+      resources: [
+        "Trello atau Jira (untuk backlog management)",
+        "The Scrum Guide",
+        "Template user stories",
+        "Git untuk version control"
+      ],
+      rubric: [
+        {
+          criteria: "Implementasi Scrum",
+          excellent: "Semua ceremony dan artefak Scrum diimplementasikan dengan benar dan konsisten",
+          good: "Sebagian besar ceremony dan artefak Scrum diimplementasikan dengan baik",
+          satisfactory: "Implementasi Scrum tidak lengkap atau tidak konsisten",
+          points: 30
+        },
+        {
+          criteria: "Produk",
+          excellent: "Aplikasi berfungsi dengan baik dan memenuhi acceptance criteria",
+          good: "Aplikasi berfungsi dengan beberapa fitur utama",
+          satisfactory: "Aplikasi belum berfungsi dengan baik",
+          points: 25
+        },
+        {
+          criteria: "Dokumentasi",
+          excellent: "Dokumentasi lengkap, terstruktur, dan mencerminkan pemahaman mendalam tentang Scrum",
+          good: "Dokumentasi cukup lengkap dan terstruktur",
+          satisfactory: "Dokumentasi kurang lengkap",
+          points: 25
+        },
+        {
+          criteria: "Kolaborasi Tim",
+          excellent: "Tim bekerja sama dengan baik, semua anggota berkontribusi aktif",
+          good: "Tim bekerja sama dengan baik namun ada anggota yang kurang aktif",
+          satisfactory: "Kolaborasi tim kurang efektif",
+          points: 20
+        }
+      ]
+    },
+    {
+      id: "tugas-3-2",
+      title: "Kanban Board Implementation",
+      type: "praktikum",
+      description: "Membuat dan mengelola Kanban board digital untuk proyek pribadi atau tugas kuliah.",
+      instructions: [
+        "Pilih tools Kanban (Trello, Notion, atau Kanbanize)",
+        "Buat board dengan minimal 4 kolom: Backlog, To Do, In Progress, Done",
+        "Definisikan WIP limits untuk setiap kolom",
+        "Tambahkan minimal 15 task cards dengan deskripsi yang jelas",
+        "Kelola board selama 1 minggu dengan update harian",
+        "Catat metrics: Lead time, Cycle time, Throughput",
+        "Buat Cumulative Flow Diagram",
+        "Analisis bottleneck dan area improvement"
+      ],
+      deliverables: [
+        "Screenshot Kanban board awal dan akhir",
+        "Cumulative Flow Diagram",
+        "Metrics report (Lead time, Cycle time, Throughput)",
+        "Analisis bottleneck dan rekomendasi improvement",
+        "Refleksi pengalaman menggunakan Kanban"
+      ],
+      duration: "1 minggu",
+      difficulty: "sedang",
+      skills: [
+        "Manajemen waktu",
+        "Visualisasi workflow",
+        "Data analysis",
+        "Self-management"
+      ],
+      resources: [
+        "Trello (free)",
+        "Notion (free untuk personal)",
+        "Panduan membuat CFD"
+      ]
+    },
+    {
+      id: "tugas-3-3",
+      title: "Survey: Adopsi Agile di Industri Lokal",
+      type: "survey",
+      description: "Meneliti tingkat adopsi metodologi Agile di perusahaan IT lokal dan tantangan yang dihadapi.",
+      instructions: [
+        "Buat kuesioner tentang adopsi Agile (Google Forms)",
+        "Distribusikan ke minimal 10 praktisi IT di perusahaan lokal",
+        "Pertanyaan mencakup: framework Agile yang digunakan, tingkat keberhasilan, tantangan, dll",
+        "Kumpulkan dan analisis data",
+        "Wawancara mendalam 2-3 responden (opsional, bonus nilai)",
+        "Buat laporan dan presentasi temuan"
+      ],
+      deliverables: [
+        "Kuesioner (link Google Forms)",
+        "Data mentah (spreadsheet)",
+        "Analisis data dengan visualisasi",
+        "Laporan hasil survey (8-10 halaman)",
+        "Presentasi (10-15 slide)"
+      ],
+      duration: "2 minggu",
+      difficulty: "sedang",
+      skills: [
+        "Riset survey",
+        "Analisis data",
+        "Statistik dasar",
+        "Penulisan laporan"
+      ]
+    },
+    {
+      id: "tugas-3-4",
+      title: "XP Practices Experiment",
+      type: "praktikum",
+      description: "Mencoba praktik-praktik Extreme Programming dalam sesi coding berpasangan.",
+      instructions: [
+        "Bentuk pasangan (pair programming)",
+        "Pilih problem sederhana untuk diselesaikan (disediakan dosen)",
+        "Terapkan TDD: tulis test terlebih dahulu, lalu implementasi",
+        "Lakukan pair programming dengan bergantian role (driver/navigator) setiap 20 menit",
+        "Praktikkan continuous integration dengan commit setiap test pass",
+        "Refactor code secara berkala",
+        "Dokumentasikan pengalaman dan pembelajaran"
+      ],
+      deliverables: [
+        "Source code dengan test cases",
+        "Git commit history menunjukkan TDD cycle",
+        "Screenshot pair programming session",
+        "Refleksi pengalaman (2-3 halaman)"
+      ],
+      duration: "3 hari",
+      difficulty: "sedang",
+      skills: [
+        "Test-Driven Development",
+        "Pair programming",
+        "Refactoring",
+        "Version control"
+      ],
+      resources: [
+        "IDE dengan testing framework",
+        "Git dan GitHub/GitLab",
+        "Problem set (disediakan dosen)"
+      ]
+    }
   ]
 };
