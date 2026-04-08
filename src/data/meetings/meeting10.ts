@@ -165,5 +165,83 @@ Old systems that remain critical to business.
     "Sommerville, I. (2016). Software Engineering. Chapter 9.",
     "Fowler, M. (2018). Refactoring: Improving the Design of Existing Code. 2nd Edition.",
     "Feathers, M. (2004). Working Effectively with Legacy Code."
+  ],
+  assignments: [
+    {
+      id: "tugas-10-1",
+      title: "Analisis dan Refactoring Legacy Code",
+      type: "kelompok",
+      description: "Ambil legacy code dari project open source, analisis technical debt-nya, dan lakukan refactoring untuk meningkatkan maintainability.",
+      instructions: [
+        "LANGKAH 1 - PILIH LEGACY PROJECT: Cari project open source yang sudah lama (>3 tahun) dan memiliki code smell. Sumber: GitHub dengan filter 'good first issue' atau 'help wanted'. Contoh: old WordPress plugins, legacy Java applications, old Python scripts.",
+        "LANGKAH 2 - SETUP PROJECT: Clone repository, setup development environment, dan pastikan aplikasi bisa dijalankan. Dokumentasikan langkah setup untuk reproducibility.",
+        "LANGKAH 3 - CODE ANALYSIS: Gunakan static analysis tools untuk mengidentifikasi masalah: (a) SonarQube untuk overall quality, (b) PMD/Checkstyle untuk Java, (c) Pylint untuk Python, (d) ESLint untuk JavaScript. Generate report.",
+        "LANGKAH 4 - IDENTIFIKASI TECHNICAL DEBT: Buat daftar technical debt yang ditemukan: (a) Code smells (God Class, Long Method, dll), (b) Security vulnerabilities, (c) Performance issues, (d) Outdated dependencies, (e) Missing tests. Prioritaskan berdasarkan impact dan effort.",
+        "LANGKAH 5 - BUAT REFACTORING PLAN: Pilih 5-10 technical debt items untuk di-refactor. Buat plan: (a) Apa yang akan di-refactor, (b) Mengapa penting, (c) Bagaimana cara refactor-nya, (d) Estimasi effort, (e) Risk dan mitigation.",
+        "LANGKAH 6 - WRITE TESTS FIRST: Sebelum refactor, tulis characterization tests untuk memastikan behavior tidak berubah. Minimal 80% coverage untuk code yang akan di-refactor.",
+        "LANGKAH 7 - REFACTOR INCREMENTALLY: Lakukan refactoring step-by-step. Setiap refactoring: (a) Commit dengan message jelas, (b) Run tests untuk ensure no regression, (c) Update documentation jika perlu.",
+        "LANGKAH 8 - MEASURE IMPROVEMENT: Jalankan static analysis lagi setelah refactoring. Bandingkan metrics before-after: (a) Code complexity, (b) Code duplication, (c) Test coverage, (d) Technical debt ratio.",
+        "LANGKAH 9 - DOKUMENTASI: Tulis laporan yang berisi: (1) Deskripsi project, (2) Technical debt yang ditemukan, (3) Refactoring plan, (4) Proses refactoring, (5) Before-after metrics, (6) Challenges dan solutions, (7) Lesson learned.",
+        "LANGKAH 10 - CONTRIBUTE BACK (BONUS): Submit Pull Request ke project original. Jika PR di-merge, bonus +20 poin!"
+      ],
+      deliverables: [
+        "Link ke original repository dan forked repository",
+        "Static analysis report before refactoring",
+        "Technical debt inventory (format Excel atau Markdown)",
+        "Refactoring plan document (format PDF)",
+        "Refactored code dengan test coverage report",
+        "Static analysis report after refactoring",
+        "Comparison metrics (before vs after)",
+        "Laporan lengkap (format PDF, minimal 12 halaman)",
+        "Pull Request link (jika ada, bonus)"
+      ],
+      duration: "3 minggu (21 hari kalender)",
+      difficulty: "sulit",
+      skills: [
+        "Legacy code analysis",
+        "Refactoring techniques",
+        "Technical debt management",
+        "Static code analysis",
+        "Test-driven refactoring",
+        "Open source contribution"
+      ],
+      resources: [
+        "Working Effectively with Legacy Code - Michael Feathers",
+        "SonarQube Community Edition",
+        "Refactoring Guru website",
+        "GitHub search: label:'good first issue'",
+        "Characterization testing guide"
+      ],
+      rubric: [
+        {
+          criteria: "Technical Debt Analysis",
+          excellent: "Analisis sangat mendalam dengan tools yang tepat dan prioritization yang baik",
+          good: "Analisis cukup baik dengan identifikasi masalah utama",
+          satisfactory: "Analisis kurang mendalam atau prioritization kurang tepat",
+          points: 25
+        },
+        {
+          criteria: "Refactoring Quality",
+          excellent: "Refactoring sangat baik dengan improvement metrics yang signifikan (>30%)",
+          good: "Refactoring baik dengan improvement yang terukur (>15%)",
+          satisfactory: "Refactoring minimal atau improvement kurang signifikan",
+          points: 35
+        },
+        {
+          criteria: "Testing",
+          excellent: "Test coverage >80% dan semua tests passing setelah refactoring",
+          good: "Test coverage >60% dengan tests passing",
+          satisfactory: "Test coverage <60% atau ada failing tests",
+          points: 20
+        },
+        {
+          criteria: "Documentation",
+          excellent: "Dokumentasi sangat lengkap, profesional, dan insightful",
+          good: "Dokumentasi lengkap dan terstruktur",
+          satisfactory: "Dokumentasi kurang lengkap",
+          points: 20
+        }
+      ]
+    }
   ]
 };
