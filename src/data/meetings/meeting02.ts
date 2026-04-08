@@ -407,5 +407,134 @@ Model yang menekankan pada rapid prototyping dan quick feedback.
     "Pressman, R.S. (2020). Software Engineering: A Practitioner's Approach. Chapter 3.",
     "Boehm, B. (1988). A Spiral Model of Software Development and Enhancement. IEEE Computer.",
     "Royce, W. (1970). Managing the Development of Large Software Systems. IEEE WESCON."
+  ],
+  assignments: [
+    {
+      id: "tugas-2-1",
+      title: "Analisis Model Proses di Perusahaan IT",
+      type: "survey",
+      description: "Mewawancarai praktisi IT di perusahaan lokal untuk memahami model proses pengembangan software yang digunakan dan menganalisis kesesuaiannya dengan karakteristik proyek.",
+      instructions: [
+        "Identifikasi perusahaan IT atau startup di sekitar kampus",
+        "Hubungi dan buat janji dengan software developer atau project manager",
+        "Siapkan pertanyaan tentang model proses yang digunakan (Waterfall, Agile, Hybrid, dll)",
+        "Tanyakan alasan pemilihan model proses tersebut",
+        "Eksplorasi kelebihan dan kekurangan yang mereka alami",
+        "Analisis kesesuaian model proses dengan karakteristik proyek",
+        "Bandingkan dengan teori yang dipelajari di kelas",
+        "Buat laporan dan rekomendasi"
+      ],
+      deliverables: [
+        "Laporan hasil wawancara (minimal 8 halaman)",
+        "Recording wawancara (audio/video dengan izin)",
+        "Analisis kesesuaian model proses",
+        "Perbandingan dengan teori",
+        "Presentasi (10-15 slide)"
+      ],
+      duration: "2 minggu",
+      difficulty: "sulit",
+      skills: [
+        "Networking dan komunikasi profesional",
+        "Analisis proses bisnis",
+        "Critical thinking",
+        "Penulisan laporan"
+      ],
+      resources: [
+        "LinkedIn untuk mencari praktisi IT",
+        "Template pertanyaan wawancara",
+        "Framework analisis model proses"
+      ],
+      rubric: [
+        {
+          criteria: "Kualitas Wawancara",
+          excellent: "Wawancara mendalam dengan pertanyaan yang relevan dan menggali informasi komprehensif",
+          good: "Wawancara cukup baik dengan informasi yang relevan",
+          satisfactory: "Wawancara terbatas pada pertanyaan dasar",
+          points: 30
+        },
+        {
+          criteria: "Analisis Model Proses",
+          excellent: "Analisis mendalam dengan keterkaitan teori dan praktik yang kuat",
+          good: "Analisis cukup baik dengan beberapa keterkaitan teori",
+          satisfactory: "Analisis permukaan tanpa kedalaman",
+          points: 30
+        },
+        {
+          criteria: "Rekomendasi",
+          excellent: "Rekomendasi berbasis data dan analisis yang solid",
+          good: "Rekomendasi relevan namun kurang didukung data",
+          satisfactory: "Rekomendasi umum tanpa landasan",
+          points: 20
+        },
+        {
+          criteria: "Presentasi",
+          excellent: "Presentasi profesional, menarik, dan informatif",
+          good: "Presentasi cukup baik dan informatif",
+          satisfactory: "Presentasi kurang terstruktur",
+          points: 20
+        }
+      ]
+    },
+    {
+      id: "tugas-2-2",
+      title: "Simulasi Proyek: Pemilihan Model Proses",
+      type: "kelompok",
+      description: "Menganalisis skenario proyek fiktif dan memilih model proses yang tepat beserta justifikasinya.",
+      instructions: [
+        "Bentuk kelompok 4-5 orang",
+        "Pilih salah satu skenario proyek yang disediakan dosen",
+        "Analisis karakteristik proyek (requirements, tim, budget, timeline, risiko)",
+        "Identifikasi model proses yang paling sesuai",
+        "Buat justifikasi pemilihan dengan pro dan kontra",
+        "Rancang timeline dan milestone proyek",
+        "Identifikasi risiko utama dan strategi mitigasi",
+        "Presentasikan hasil analisis"
+      ],
+      deliverables: [
+        "Dokumen analisis proyek (10-15 halaman)",
+        "Timeline proyek (Gantt chart atau diagram serupa)",
+        "Risk assessment matrix",
+        "Presentasi kelompok (15-20 slide)"
+      ],
+      duration: "1 minggu",
+      difficulty: "sedang",
+      skills: [
+        "Analisis proyek",
+        "Pengambilan keputusan",
+        "Perencanaan proyek",
+        "Kerja tim"
+      ],
+      resources: [
+        "Skenario proyek (disediakan dosen)",
+        "Template risk assessment",
+        "Tools: Trello, Asana, atau Microsoft Project"
+      ]
+    },
+    {
+      id: "tugas-2-3",
+      title: "Diagram Model Proses",
+      type: "praktikum",
+      description: "Membuat diagram visual untuk berbagai model proses menggunakan tools diagramming.",
+      instructions: [
+        "Pilih tools diagramming (draw.io, Lucidchart, atau Visio)",
+        "Buat diagram untuk 3 model proses: Waterfall, Spiral, dan V-Model",
+        "Setiap diagram harus menunjukkan fase, aktivitas, dan deliverables",
+        "Tambahkan keterangan untuk setiap fase",
+        "Buat perbandingan visual antar model",
+        "Ekspor dalam format PDF dan PNG"
+      ],
+      deliverables: [
+        "3 diagram model proses (Waterfall, Spiral, V-Model)",
+        "Tabel perbandingan antar model",
+        "File source (editable) dan export (PDF/PNG)"
+      ],
+      duration: "4 hari",
+      difficulty: "mudah",
+      skills: [
+        "Visualisasi",
+        "Penggunaan tools diagramming",
+        "Attention to detail"
+      ]
+    }
   ]
 };
