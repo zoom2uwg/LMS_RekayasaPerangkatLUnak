@@ -1,14 +1,18 @@
 import { Meeting } from '../data/courseData';
 import { useState } from 'react';
 import IllustrationRenderer from './IllustrationRenderer';
+import AssignmentCard from './AssignmentCard';
 
 interface MeetingContentProps {
   meeting: Meeting;
   onOpenSidebar: () => void;
 }
 
+type TabType = 'materi' | 'tugas';
+
 export default function MeetingContent({ meeting, onOpenSidebar }: MeetingContentProps) {
   const [activeTab, setActiveTab] = useState(0);
+  const [activeTabType, setActiveTabType] = useState<TabType>('materi');
 
   const getTypeColor = () => {
     if (meeting.type === 'uts') return 'from-yellow-600 to-orange-600';
@@ -233,38 +237,101 @@ export default function MeetingContent({ meeting, onOpenSidebar }: MeetingConten
 
         {/* Content Tabs */}
         <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          {/* Tab Headers */}
-          <div className="flex overflow-x-auto border-b border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50 scrollbar-thin">
-            {meeting.subtopics.map((subtopic, index) => (
+          {/* Tab Type Selector */}
+          <div className="flex border-b border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50">
+            <button
+              onClick={() => setActiveTabType('materi')}
+              className={`
+                flex-1 px-6 py-4 text-sm font-semibold transition-all duration-200
+                border-b-2 relative group
+                ${activeTabType === 'materi' 
+                  ? 'border-blue-600 text-blue-600 bg-white' 
+                  : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/50'
+                }
+              `}
+            >
+              <span className="flex items-center justify-center gap-2">
+                <span>📚</span>
+                <span>Materi</span>
+              </span>
+            </button>
+            {meeting.assignments && meeting.assignments.length > 0 && (
               <button
-                key={index}
-                onClick={() => setActiveTab(index)}
+                onClick={() => setActiveTabType('tugas')}
                 className={`
-                  flex-shrink-0 px-6 py-4 text-sm font-semibold transition-all duration-200
-                  border-b-2 -mb-px relative group
-                  ${activeTab === index 
-                    ? 'border-blue-600 text-blue-600 bg-white' 
+                  flex-1 px-6 py-4 text-sm font-semibold transition-all duration-200
+                  border-b-2 relative group
+                  ${activeTabType === 'tugas' 
+                    ? 'border-purple-600 text-purple-600 bg-white' 
                     : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/50'
                   }
                 `}
               >
-                {subtopic.title}
-                {activeTab === index && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"></span>
-                )}
+                <span className="flex items-center justify-center gap-2">
+                  <span>📝</span>
+                  <span>Tugas ({meeting.assignments.length})</span>
+                </span>
               </button>
-            ))}
+            )}
           </div>
 
-          {/* Tab Content */}
-          <div className="p-6 md:p-8 animate-fadeIn">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-              {meeting.subtopics[activeTab].title}
-            </h2>
-            <div className="prose prose-slate max-w-none">
-              {renderContent(meeting.subtopics[activeTab].content)}
+          {/* Materi Tabs */}
+          {activeTabType === 'materi' && (
+            <>
+              {/* Subtopic Tabs */}
+              <div className="flex overflow-x-auto border-b border-slate-200 bg-slate-50 scrollbar-thin">
+                {meeting.subtopics.map((subtopic, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    className={`
+                      flex-shrink-0 px-6 py-3 text-sm font-semibold transition-all duration-200
+                      border-b-2 -mb-px relative group
+                      ${activeTab === index 
+                        ? 'border-blue-600 text-blue-600 bg-white' 
+                        : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-white/50'
+                      }
+                    `}
+                  >
+                    {subtopic.title}
+                    {activeTab === index && (
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"></span>
+                    )}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tab Content */}
+              <div className="p-6 md:p-8 animate-fadeIn">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                  {meeting.subtopics[activeTab].title}
+                </h2>
+                <div className="prose prose-slate max-w-none">
+                  {renderContent(meeting.subtopics[activeTab].content)}
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Tugas Tab */}
+          {activeTabType === 'tugas' && meeting.assignments && (
+            <div className="p-6 md:p-8 animate-fadeIn">
+              <div className="mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Tugas dan Aktivitas
+                </h2>
+                <p className="text-slate-600">
+                  Kerjakan tugas-tugas berikut untuk memperdalam pemahaman materi dan mengembangkan kompetensi praktis
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                {meeting.assignments.map((assignment, index) => (
+                  <AssignmentCard key={assignment.id} assignment={assignment} index={index} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* References */}

@@ -234,5 +234,134 @@ export const meeting01: Meeting = {
     "Sommerville, I. (2016). Software Engineering. 10th Edition. Pearson.",
     "IEEE Standard Glossary of Software Engineering Terminology (IEEE Std 610.12-1990)",
     "Brooks, F. (1995). The Mythical Man-Month. Anniversary Edition. Addison-Wesley."
+  ],
+  assignments: [
+    {
+      id: "tugas-1-1",
+      title: "Survey Sistem Informasi di Unit Kampus",
+      type: "survey",
+      description: "Melakukan survey ke salah satu unit di kampus untuk mengidentifikasi sistem informasi yang digunakan, menganalisis masalah yang ada, dan memberikan rekomendasi perbaikan dari perspektif Software Engineering.",
+      instructions: [
+        "Pilih salah satu unit di kampus (BAAK, Keuangan, Perpustakaan, Laboratorium, dll)",
+        "Buat janji untuk wawancara dengan staff atau kepala unit",
+        "Siapkan daftar pertanyaan tentang sistem informasi yang digunakan",
+        "Lakukan wawancara dan observasi proses bisnis yang ada",
+        "Identifikasi masalah atau kekurangan dari sistem saat ini",
+        "Analisis dari perspektif Software Engineering (proses, kualitas, maintainability)",
+        "Buat rekomendasi perbaikan dengan pendekatan Software Engineering",
+        "Dokumentasikan hasil dalam laporan tertulis"
+      ],
+      deliverables: [
+        "Laporan hasil survey (minimal 10 halaman)",
+        "Transkrip wawancara",
+        "Foto dokumentasi (jika diizinkan)",
+        "Diagram alur proses bisnis saat ini",
+        "Daftar masalah dan rekomendasi solusi",
+        "Presentasi PowerPoint (10-15 slide)"
+      ],
+      duration: "2 minggu",
+      difficulty: "sedang",
+      skills: [
+        "Komunikasi dan wawancara",
+        "Analisis sistem",
+        "Dokumentasi teknis",
+        "Pemecahan masalah",
+        "Presentasi"
+      ],
+      resources: [
+        "Panduan teknik wawancara (akan dibagikan di kelas)",
+        "Template laporan survey",
+        "Contoh diagram proses bisnis"
+      ],
+      rubric: [
+        {
+          criteria: "Kelengkapan Survey",
+          excellent: "Survey dilakukan ke unit yang relevan dengan wawancara mendalam dan observasi menyeluruh",
+          good: "Survey dilakukan dengan baik namun ada beberapa aspek yang kurang dieksplorasi",
+          satisfactory: "Survey dilakukan namun data yang dikumpulkan kurang lengkap",
+          points: 25
+        },
+        {
+          criteria: "Analisis Masalah",
+          excellent: "Analisis mendalam dengan identifikasi akar masalah dan keterkaitan dengan konsep RPL",
+          good: "Analisis cukup baik dengan identifikasi masalah utama",
+          satisfactory: "Analisis permukaan tanpa kedalaman",
+          points: 25
+        },
+        {
+          criteria: "Rekomendasi Solusi",
+          excellent: "Rekomendasi solusi inovatif, realistis, dan berbasis konsep Software Engineering",
+          good: "Rekomendasi solusi relevan namun kurang detail implementasinya",
+          satisfactory: "Rekomendasi solusi umum tanpa landasan konsep",
+          points: 25
+        },
+        {
+          criteria: "Kualitas Laporan & Presentasi",
+          excellent: "Laporan terstruktur, profesional, dan presentasi menarik dengan visualisasi yang baik",
+          good: "Laporan dan presentasi cukup baik dengan struktur yang jelas",
+          satisfactory: "Laporan dan presentasi kurang terstruktur",
+          points: 25
+        }
+      ]
+    },
+    {
+      id: "tugas-1-2",
+      title: "Studi Kasus: Software Crisis",
+      type: "kelompok",
+      description: "Menganalisis kasus nyata kegagalan proyek perangkat lunak dan mempresentasikan pelajaran yang dapat dipetik dari perspektif Software Engineering.",
+      instructions: [
+        "Bentuk kelompok 3-4 orang",
+        "Cari dan pilih satu kasus kegagalan proyek software terkenal (contoh: Healthcare.gov, Denver Airport, dll)",
+        "Kumpulkan informasi dari berbagai sumber tentang proyek tersebut",
+        "Analisis penyebab kegagalan dari perspektif Software Engineering",
+        "Identifikasi pelajaran yang dapat dipetik",
+        "Bandingkan dengan kasus sukses yang serupa",
+        "Buat presentasi yang menarik dan informatif"
+      ],
+      deliverables: [
+        "Presentasi PowerPoint (15-20 slide)",
+        "Makalah analisis (minimal 8 halaman)",
+        "Daftar pustaka dari sumber terpercaya",
+        "Video presentasi (opsional, bonus nilai)"
+      ],
+      duration: "1 minggu",
+      difficulty: "mudah",
+      skills: [
+        "Riset dan analisis",
+        "Kerja tim",
+        "Critical thinking",
+        "Presentasi"
+      ],
+      resources: [
+        "The Mythical Man-Month - Frederick Brooks",
+        "IEEE Software Failure Case Studies",
+        "Software Engineering textbooks"
+      ]
+    },
+    {
+      id: "tugas-1-3",
+      title: "Refleksi: Software Engineering vs Programming",
+      type: "individual",
+      description: "Menulis esai reflektif tentang perbedaan Software Engineering dan Programming berdasarkan pemahaman pribadi dan pengalaman.",
+      instructions: [
+        "Baca dan pahami materi tentang perbedaan Software Engineering dan Programming",
+        "Refleksikan pengalaman pribadi Anda dalam membuat program",
+        "Identifikasi aspek-aspek Software Engineering yang belum Anda terapkan",
+        "Tuliskan pemahaman Anda tentang perbedaan keduanya",
+        "Berikan contoh konkret dari pengalaman atau observasi Anda",
+        "Sertakan rencana pengembangan kompetensi Software Engineering Anda"
+      ],
+      deliverables: [
+        "Esai reflektif (3-5 halaman)",
+        "Mind map atau diagram perbedaan SE vs Programming"
+      ],
+      duration: "3 hari",
+      difficulty: "mudah",
+      skills: [
+        "Critical thinking",
+        "Penulisan akademik",
+        "Self-reflection"
+      ]
+    }
   ]
 };
